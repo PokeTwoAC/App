@@ -29,14 +29,12 @@ jobs:
           key: ${{ runner.os }}-${{ steps.get-date.outputs.date }}-${{ hashFiles('buildozer.spec') }}
      
       - name: Cython
-        uses: ArtemSBulgakov/buildozer-action@v1
         id: cython
         with:
           command: echo "y" | pip uninstall cython
          
      
       - name: insa
-        uses: ArtemSBulgakov/buildozer-action@v1
         id: insa
         with:
           command: pip install Cython==0.29.36
