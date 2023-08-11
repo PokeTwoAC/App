@@ -30,13 +30,13 @@ jobs:
      
       - name: Cython
         id: cython
-        with:
+        run:
           command: echo "y" | pip uninstall cython
          
      
       - name: insa
         id: insa
-        with:
+        run:
           command: pip install Cython==0.29.36
        
 
