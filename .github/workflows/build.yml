@@ -30,14 +30,14 @@ jobs:
      
       - name: Cython
         id: cython
-        run:
-          command: echo "y" | pip uninstall cython
+        run: |
+          echo "y" | pip uninstall cython
          
      
       - name: insa
         id: insa
-        run:
-          command: pip install Cython==0.29.36
+        run: |
+          pip install Cython==0.29.36
        
 
       - name: Build with Buildozer
